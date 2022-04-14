@@ -56,6 +56,9 @@ TagManager:
   - name: Foreground
     uniqueID: 2185879093
     locked: 0
-  - name: Speech Bubbles & Arrows
+  - name: Handset
+    uniqueID: 422325195
+    locked: 0
+  - name: Speech Bubbles and Arrows
     uniqueID: 1560363379
     locked: 0

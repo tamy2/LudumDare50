@@ -16,7 +16,7 @@ public class TyperNumber : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        SetCurrentNumber();
+        //SetCurrentNumber();
     }
 
     // Update is called once per frame
@@ -26,7 +26,7 @@ public class TyperNumber : MonoBehaviour
         RemoveHyphen();
     }
 
-    private void SetCurrentNumber() {
+    public void SetCurrentNumber() {
         currentNumber = GenerateNumber();
         SetRemainingNumber(currentNumber);
     }
@@ -51,9 +51,11 @@ public class TyperNumber : MonoBehaviour
         if (input.All(char.IsDigit)) {
             if (IsCorrectNumber(input)) {
                 RemoveNumber();
+                /*
                 if (IsNumberComplete()) {
                     SetCurrentNumber();
                 }
+                */
             } else {
                 //print("Number typo!");
                 numberOutput.GetComponent<Shake>().StartShake();

@@ -8,6 +8,7 @@ public class SequencingManager : MonoBehaviour
 {
     public static SequencingManager instance;
     public static bool isGameRunning;
+    //public SpriteRenderer overlay;
     public Animator menuAnimator;
     public Animator gameUIAnimator;
     public float timeAlive;
@@ -37,8 +38,8 @@ public class SequencingManager : MonoBehaviour
 
         if (!gameOver && isGameRunning) {
             timeAlive += Time.deltaTime;
-            timerReadout.text = timeAlive.ToString("F2");
-            finalTimerReadout.text = timeAlive.ToString("F2");
+            //timerReadout.text = timeAlive.ToString("F2");
+            //finalTimerReadout.text = timeAlive.ToString("F2");
         }
 
         if (gameOver && Input.GetKeyDown(KeyCode.R)) {
@@ -50,8 +51,10 @@ public class SequencingManager : MonoBehaviour
     void StartGame() {
         isGameRunning = true;
         gameOver = false;
-        menuAnimator.SetTrigger("Hide");
-        gameUIAnimator.SetTrigger("Show");
+        menuAnimator.SetBool("spacePressed", true);
+        //overlay.enabled = false;
+        //menuAnimator.SetTrigger("MoveOut");
+        //gameUIAnimator.SetTrigger("Show");
     }
 
     public void End() {

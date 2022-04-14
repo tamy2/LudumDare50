@@ -5,6 +5,8 @@ using UnityEngine;
 public class CharController : MonoBehaviour
 {
     //public Transform sprite;
+    public Animator animator;
+    public SpriteRenderer speechBubble;
     public Vector3 hiddenPosition;
     public Vector3 shownPosition;
     public float speed;
